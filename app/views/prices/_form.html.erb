@@ -29,7 +29,20 @@
     </div>
     <%= error_span(@price[:price]) %>
   </div>
-
+  <div class="control-group">
+    <%= f.label :price_new, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :price_new, :class => 'form-control' %>
+    </div>
+    <%= error_span(@price[:price_new]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :price_used, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :price_used, :class => 'form-control' %>
+    </div>
+    <%= error_span(@price[:price_used]) %>
+  </div>
 
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

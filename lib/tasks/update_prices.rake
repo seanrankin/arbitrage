@@ -8,7 +8,9 @@ task :update_prices => :environment do
     url = "http://www.amazon.com/dp/#{product.pid}"
     doc = Nokogiri::HTML(open(url, "User-Agent" => "Mozilla/5.0:", "From" => "test@test.com", "Referer" => "http://www.google.com"))
     price = doc.at_css(".a-size-medium.a-color-price").text[/[0-9\.]+/] if doc.at_css(".a-size-medium.a-color-price")
-    Price.create!(:product_id => product.id, :price => price)
+    price_new = doc.css("#olp_feature_div .a-section span span")[0].text if doc.css("#olp_feature_div .a-section span span")[0]
+    price_used = doc.css("#olp_feature_div .a-section span span")[1].text if doc.css("#olp_feature_div .a-section span span")[1]
+    Price.create!(:product_id => product.id, :price => price, :price_new => price_new, :price_used => price_used)
     puts product.name
     #puts price
   end

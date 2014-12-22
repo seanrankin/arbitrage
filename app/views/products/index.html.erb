@@ -8,12 +8,12 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:pid) %></th>
-      <th><%= model_class.human_attribute_name(:url) %></th>
-      <th><%= model_class.human_attribute_name(:store_id) %></th>
+      <!--th><%= model_class.human_attribute_name(:url) %></th>
+      <th><%= model_class.human_attribute_name(:store_id) %></th-->
       <th><%= model_class.human_attribute_name(:isbn) %></th>
       <th><%= model_class.human_attribute_name(:isbn10) %></th>
       <th><%= model_class.human_attribute_name(:active) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <!-- <th><%= model_class.human_attribute_name(:created_at) %></th> -->
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -34,14 +34,18 @@
         <td><%= product.name %>
           <%#= doc.xpath("//meta[@itemprop='price']/@content").text %>
           <%#= doc.at_css(".a-size-medium.a-color-price").text if doc.at_css(".a-size-medium.a-color-price") %>
+          <%#= doc.css("#bylineBullets_feature_div .a-section span")[1].text if doc.css("#bylineBullets_feature_div .a-section span")[1] %>
+          <%#= doc.css("#olp_feature_div .a-section span span")[0].text if doc.css("#olp_feature_div .a-section span span")[0] %>
+          <%#= doc.css("#olp_feature_div .a-section span span")[1].text if doc.css("#olp_feature_div .a-section span span")[1] %>
+
         </td>
         <td><%= product.pid %></td>
-        <td><%= product.url %></td>
-        <td><%= product.store_id %></td>
+        <!--td><%= product.url %></td>
+        <td><%= product.store_id %></td-->
         <td><%= product.isbn %></td>
         <td><%= product.isbn10 %></td>
         <td><%= product.active %></td>
-        <td><%=l product.created_at %></td>
+        <!-- <td><%=l product.created_at %></td> -->
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_product_path(product), :class => 'btn btn-default btn-xs' %>
