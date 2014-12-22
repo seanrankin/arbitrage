@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  pid: MyString
+  url: MyString
+  store_id: 1
+  isbn: MyString
+  isbn10: MyString
+  active: false
+
+two:
+  name: MyString
+  pid: MyString
+  url: MyString
+  store_id: 1
+  isbn: MyString
+  isbn10: MyString
+  active: false
