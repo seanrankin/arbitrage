@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20141222020423) do
   create_table "prices", force: true do |t|
     t.integer  "product_id"
     t.float    "price"
+    t.float    "price_new"
+    t.float    "price_used"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
