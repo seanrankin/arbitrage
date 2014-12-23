@@ -41,3 +41,5 @@ gem 'spring',        group: :development
 gem "nokogiri"
 gem "twitter-bootstrap-rails"
 gem 'rails_12factor', group: :production
+gem "chartkick"
+gem 'groupdate'
